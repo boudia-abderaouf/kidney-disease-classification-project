@@ -582,3 +582,42 @@ Traceback (most recent call last):
 mlflow.exceptions.MlflowException: When an mlflow-artifacts URI was supplied, the tracking URI must be a valid http or https URI, but it was currently set to file:///C:/Users/acerv/Desktop/Projects/project_endtoend_kidney/mlruns. Perhaps you forgot to set the tracking URI to the running MLflow server. To set the tracking URI, use either of the following methods:
 1. Set the MLFLOW_TRACKING_URI environment variable to the desired tracking URI. `export MLFLOW_TRACKING_URI=http://localhost:5000`
 2. Set the tracking URI programmatically by calling `mlflow.set_tracking_uri`. `mlflow.set_tracking_uri('http://localhost:5000')`
+[2024-12-02 22:34:27,012: INFO: stage_01_data_ingestion: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2024-12-02 22:34:27,017: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-12-02 22:34:27,024: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-12-02 22:34:27,026: INFO: common: created directory at: artifacts]
+[2024-12-02 22:34:27,028: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-12-02 22:34:27,029: INFO: data_ingestion: Downloading data from https://drive.google.com/file/d/1b8pYGzzS8XBlpmdAzEsU0e_hxOa98yhk into file artifacts/data_ingestion/data.zip]
+[2024-12-02 22:34:44,232: INFO: data_ingestion: Downloaded data from https://drive.google.com/file/d/1b8pYGzzS8XBlpmdAzEsU0e_hxOa98yhk into file artifacts/data_ingestion/data.zip]
+[2024-12-02 22:34:45,619: INFO: stage_01_data_ingestion: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2024-12-02 22:35:13,008: INFO: stage_02_prepare_base_model: *******************]
+[2024-12-02 22:35:13,009: INFO: stage_02_prepare_base_model: >>>>>> stage Prepare base model started <<<<<<]
+[2024-12-02 22:35:13,013: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-12-02 22:35:13,016: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-12-02 22:35:13,017: INFO: common: created directory at: artifacts]
+[2024-12-02 22:35:13,019: INFO: common: created directory at: artifacts/prepare_base_model]
+[2024-12-02 22:35:13,983: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2024-12-02 22:35:14,428: INFO: stage_02_prepare_base_model: >>>>>> stage Prepare base model completed <<<<<<
+
+x==========x]
+[2024-12-02 22:39:29,792: INFO: stage_03_model_training: *******************]
+[2024-12-02 22:39:29,793: INFO: stage_03_model_training: >>>>>> stage Training started <<<<<<]
+[2024-12-02 22:39:29,799: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-12-02 22:39:29,802: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-12-02 22:39:29,803: INFO: common: created directory at: artifacts]
+[2024-12-02 22:39:29,804: INFO: common: created directory at: artifacts\training]
+[2024-12-02 22:42:20,981: INFO: stage_03_model_training: >>>>>> stage Training completed <<<<<<
+
+x==========x]
+[2024-12-02 22:42:37,297: INFO: stage_04_model_evaluation: *******************]
+[2024-12-02 22:42:37,299: INFO: stage_04_model_evaluation: >>>>>> stage Evaluation stage started <<<<<<]
+[2024-12-02 22:42:37,303: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-12-02 22:42:37,306: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-12-02 22:42:37,307: INFO: common: created directory at: artifacts]
+[2024-12-02 22:42:58,723: INFO: common: json file saved at: scores.json]
+[2024-12-02 22:42:58,724: INFO: common: json file saved at: scores.json]
+[2024-12-02 22:42:58,725: INFO: stage_04_model_evaluation: >>>>>> stage Evaluation stage completed <<<<<<
+
+x==========x]

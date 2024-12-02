@@ -1,0 +1,117 @@
+schema: '2.0'
+stages:
+  data_ingestion:
+    cmd: python src/cnnClassifier/pipeline/stage_01_data_ingestion.py
+    deps:
+    - path: config/config.yaml
+      hash: md5
+      md5: 27c247bf02661aedd2e500a9c8eaf570
+      size: 566
+    - path: src/cnnClassifier/pipeline/stage_01_data_ingestion.py
+      hash: md5
+      md5: 9c9f1540e89ef8fb5f6f2cf231e7faf9
+      size: 916
+    outs:
+    - path: artifacts/data_ingestion/CT-KIDNEY-DATASET
+      hash: md5
+      md5: b8867b9c4966cc59a755cf9203559a8e.dir
+      size: 47533102
+      nfiles: 400
+  prepare_base_model:
+    cmd: python src/cnnClassifier/pipeline/stage_02_prepare_base_model.py
+    deps:
+    - path: config/config.yaml
+      hash: md5
+      md5: 27c247bf02661aedd2e500a9c8eaf570
+      size: 566
+    - path: src/cnnClassifier/pipeline/stage_02_prepare_base_model.py
+      hash: md5
+      md5: 3bc96466e43aca4ebfcf8da209403834
+      size: 1053
+    params:
+      params.yaml:
+        CLASSES: 2
+        IMAGE_SIZE:
+        - 224
+        - 224
+        - 3
+        INCLUDE_TOP: false
+        LEARNING_RATE: 0.01
+        WEIGHTS: imagenet
+    outs:
+    - path: artifacts/prepare_base_model
+      hash: md5
+      md5: 0ded47d50c21ee96126ebc3435c6dba7.dir
+      size: 118054560
+      nfiles: 2
+  model_training:
+    cmd: python src/cnnClassifier/pipeline/stage_03_model_training.py
+    deps:
+    - path: artifacts/data_ingestion/CT-KIDNEY-DATASET
+      hash: md5
+      md5: b8867b9c4966cc59a755cf9203559a8e.dir
+      size: 47533102
+      nfiles: 400
+    - path: artifacts/prepare_base_model
+      hash: md5
+      md5: 0ded47d50c21ee96126ebc3435c6dba7.dir
+      size: 118054560
+      nfiles: 2
+    - path: config/config.yaml
+      hash: md5
+      md5: 27c247bf02661aedd2e500a9c8eaf570
+      size: 566
+    - path: src/cnnClassifier/pipeline/stage_02_prepare_base_model.py
+      hash: md5
+      md5: 3bc96466e43aca4ebfcf8da209403834
+      size: 1053
+    - path: src/cnnClassifier/pipeline/stage_03_model_training.py
+      hash: md5
+      md5: 80b2d62d8713869e507300f15c26e4b3
+      size: 971
+    params:
+      params.yaml:
+        AUGMENTATION: true
+        BATCH_SIZE: 16
+        EPOCHS: 3
+        IMAGE_SIZE:
+        - 224
+        - 224
+        - 3
+    outs:
+    - path: artifacts/training/model.h5
+      hash: md5
+      md5: 659b8615805f1ea4935e6d720f64cc29
+      size: 59337520
+  model_evaluation:
+    cmd: python src/cnnClassifier/pipeline/stage_04_model_evaluation.py
+    deps:
+    - path: artifacts/data_ingestion/CT-KIDNEY-DATASET
+      hash: md5
+      md5: b8867b9c4966cc59a755cf9203559a8e.dir
+      size: 47533102
+      nfiles: 400
+    - path: artifacts/training/model.h5
+      hash: md5
+      md5: 659b8615805f1ea4935e6d720f64cc29
+      size: 59337520
+    - path: config/config.yaml
+      hash: md5
+      md5: 27c247bf02661aedd2e500a9c8eaf570
+      size: 566
+    - path: src/cnnClassifier/pipeline/stage_04_model_evaluation.py
+      hash: md5
+      md5: 9c4eb3497c0b210b220f3c6a47d8857b
+      size: 985
+    params:
+      params.yaml:
+        BATCH_SIZE: 16
+        IMAGE_SIZE:
+        - 224
+        - 224
+        - 3
+    outs:
+    - path: scores.json
+      hash: md5
+      md5: 0b93e97187c436add43361e2f00bbf57
+      size: 60
