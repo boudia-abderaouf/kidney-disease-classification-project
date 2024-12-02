@@ -22,7 +22,7 @@ class DataIngestion:
             os.makedirs("artifacts/data_ingestion", exist_ok=True)
             logger.info(f"Downloading data from {dataset_url} into file {zip_download_dir}")
 
-            file_id = dataset_url.split("/")[-2]
+            file_id = dataset_url.split("/")[-1]
             prefix = 'https://drive.google.com/uc?/export=download&id='
             gdown.download(prefix+file_id,zip_download_dir)
 

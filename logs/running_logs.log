@@ -90,3 +90,495 @@ x==========x]
 [2024-11-27 09:37:18,442: INFO: main: >>>>>> stage Prepare base model completed <<<<<<
 
 x==========x]
+[2024-11-28 12:04:32,557: INFO: main: Welcome to our custom log]
+[2024-11-28 12:04:32,558: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2024-11-28 12:04:32,561: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-11-28 12:04:32,562: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-11-28 12:04:32,563: INFO: common: created directory at: artifacts]
+[2024-11-28 12:04:32,565: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-11-28 12:04:32,565: INFO: data_ingestion: Downloading data from https://drive.google.com/file/d/1b8pYGzzS8XBlpmdAzEsU0e_hxOa98yhk into file artifacts/data_ingestion/data.zip]
+[2024-11-28 12:04:32,737: ERROR: main: Failed to retrieve file url:
+
+	Cannot retrieve the public link of the file. You may need to change
+	the permission to 'Anyone with the link', or have had many accesses.
+	Check FAQ in https://github.com/wkentaro/gdown?tab=readme-ov-file#faq.
+
+You may still be able to access the file from the browser:
+
+	https://drive.google.com/uc?/export=download&id=d
+
+but Gdown can't. Please check connections and permissions.]
+Traceback (most recent call last):
+  File "C:\Users\acerv\anaconda3\envs\kidney\lib\site-packages\gdown\download.py", line 267, in download
+    url = get_url_from_gdrive_confirmation(res.text)
+  File "C:\Users\acerv\anaconda3\envs\kidney\lib\site-packages\gdown\download.py", line 55, in get_url_from_gdrive_confirmation
+    raise FileURLRetrievalError(
+gdown.exceptions.FileURLRetrievalError: Cannot retrieve the public link of the file. You may need to change the permission to 'Anyone with the link', or have had many accesses. Check FAQ in https://github.com/wkentaro/gdown?tab=readme-ov-file#faq.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:/Users/acerv/Desktop/Projects/project_endtoend_kidney/main.py", line 12, in <module>
+    data_ingestion.main()
+  File "c:\users\acerv\desktop\projects\project_endtoend_kidney\src\cnnClassifier\pipeline\stage_01_data_ingestion.py", line 17, in main
+    data_ingestion.download_file()
+  File "c:\users\acerv\desktop\projects\project_endtoend_kidney\src\cnnClassifier\components\data_ingestion.py", line 32, in download_file
+    raise e
+  File "c:\users\acerv\desktop\projects\project_endtoend_kidney\src\cnnClassifier\components\data_ingestion.py", line 27, in download_file
+    gdown.download(prefix+file_id,zip_download_dir)
+  File "C:\Users\acerv\anaconda3\envs\kidney\lib\site-packages\gdown\download.py", line 278, in download
+    raise FileURLRetrievalError(message)
+gdown.exceptions.FileURLRetrievalError: Failed to retrieve file url:
+
+	Cannot retrieve the public link of the file. You may need to change
+	the permission to 'Anyone with the link', or have had many accesses.
+	Check FAQ in https://github.com/wkentaro/gdown?tab=readme-ov-file#faq.
+
+You may still be able to access the file from the browser:
+
+	https://drive.google.com/uc?/export=download&id=d
+
+but Gdown can't. Please check connections and permissions.
+[2024-11-28 12:09:30,348: INFO: main: Welcome to our custom log]
+[2024-11-28 12:09:30,348: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2024-11-28 12:09:30,351: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-11-28 12:09:30,353: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-11-28 12:09:30,354: INFO: common: created directory at: artifacts]
+[2024-11-28 12:09:30,355: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-11-28 12:09:30,356: INFO: data_ingestion: Downloading data from https://drive.google.com/file/d/1b8pYGzzS8XBlpmdAzEsU0e_hxOa98yhk into file artifacts/data_ingestion/data.zip]
+[2024-11-28 12:09:30,537: ERROR: main: Failed to retrieve file url:
+
+	Cannot retrieve the public link of the file. You may need to change
+	the permission to 'Anyone with the link', or have had many accesses.
+	Check FAQ in https://github.com/wkentaro/gdown?tab=readme-ov-file#faq.
+
+You may still be able to access the file from the browser:
+
+	https://drive.google.com/uc?/export=download&id=d
+
+but Gdown can't. Please check connections and permissions.]
+Traceback (most recent call last):
+  File "C:\Users\acerv\anaconda3\envs\kidney\lib\site-packages\gdown\download.py", line 267, in download
+    url = get_url_from_gdrive_confirmation(res.text)
+  File "C:\Users\acerv\anaconda3\envs\kidney\lib\site-packages\gdown\download.py", line 55, in get_url_from_gdrive_confirmation
+    raise FileURLRetrievalError(
+gdown.exceptions.FileURLRetrievalError: Cannot retrieve the public link of the file. You may need to change the permission to 'Anyone with the link', or have had many accesses. Check FAQ in https://github.com/wkentaro/gdown?tab=readme-ov-file#faq.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "main.py", line 12, in <module>
+    data_ingestion.main()
+  File "c:\users\acerv\desktop\projects\project_endtoend_kidney\src\cnnClassifier\pipeline\stage_01_data_ingestion.py", line 17, in main
+    data_ingestion.download_file()
+  File "c:\users\acerv\desktop\projects\project_endtoend_kidney\src\cnnClassifier\components\data_ingestion.py", line 32, in download_file
+    raise e
+  File "c:\users\acerv\desktop\projects\project_endtoend_kidney\src\cnnClassifier\components\data_ingestion.py", line 27, in download_file
+    gdown.download(prefix+file_id,zip_download_dir)
+  File "C:\Users\acerv\anaconda3\envs\kidney\lib\site-packages\gdown\download.py", line 278, in download
+    raise FileURLRetrievalError(message)
+gdown.exceptions.FileURLRetrievalError: Failed to retrieve file url:
+
+	Cannot retrieve the public link of the file. You may need to change
+	the permission to 'Anyone with the link', or have had many accesses.
+	Check FAQ in https://github.com/wkentaro/gdown?tab=readme-ov-file#faq.
+
+You may still be able to access the file from the browser:
+
+	https://drive.google.com/uc?/export=download&id=d
+
+but Gdown can't. Please check connections and permissions.
+[2024-11-28 12:24:14,525: INFO: main: Welcome to our custom log]
+[2024-11-28 12:24:14,525: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2024-11-28 12:24:14,528: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-11-28 12:24:14,530: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-11-28 12:24:14,531: INFO: common: created directory at: artifacts]
+[2024-11-28 12:24:14,531: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-11-28 12:24:14,532: INFO: data_ingestion: Downloading data from https://drive.google.com/file/d/1b8pYGzzS8XBlpmdAzEsU0e_hxOa98yhk into file artifacts/data_ingestion/data.zip]
+[2024-11-28 12:24:19,471: INFO: data_ingestion: Downloaded data from https://drive.google.com/file/d/1b8pYGzzS8XBlpmdAzEsU0e_hxOa98yhk into file artifacts/data_ingestion/data.zip]
+[2024-11-28 12:24:20,149: INFO: main: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2024-11-28 12:24:20,150: INFO: main: *******************]
+[2024-11-28 12:24:20,150: INFO: main: >>>>>> stage Prepare base model started <<<<<<]
+[2024-11-28 12:24:20,153: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-11-28 12:24:20,156: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-11-28 12:24:20,157: INFO: common: created directory at: artifacts]
+[2024-11-28 12:24:20,158: INFO: common: created directory at: artifacts/prepare_base_model]
+[2024-11-28 12:24:20,940: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2024-11-28 12:24:21,224: INFO: main: >>>>>> stage Prepare base model completed <<<<<<
+
+x==========x]
+[2024-11-28 12:24:21,225: INFO: main: *******************]
+[2024-11-28 12:24:21,225: INFO: main: >>>>>> stage Training started <<<<<<]
+[2024-11-28 12:24:21,228: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-11-28 12:24:21,231: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-11-28 12:24:21,233: INFO: common: created directory at: artifacts]
+[2024-11-28 12:24:21,234: INFO: common: created directory at: artifacts\training]
+[2024-11-28 12:24:21,667: ERROR: main: [WinError 3] Le chemin d’accès spécifié est introuvable: 'artifacts\\data_ingestion\\kidney-ct-scan-image']
+Traceback (most recent call last):
+  File "main.py", line 37, in <module>
+    model_trainer.main()
+  File "c:\users\acerv\desktop\projects\project_endtoend_kidney\src\cnnClassifier\pipeline\stage_03_model_training.py", line 23, in main
+    training.train_valid_generator()
+  File "c:\users\acerv\desktop\projects\project_endtoend_kidney\src\cnnClassifier\components\model_training.py", line 37, in train_valid_generator
+    self.valid_generator = valid_datagenerator.flow_from_directory(
+  File "C:\Users\acerv\anaconda3\envs\kidney\lib\site-packages\keras\preprocessing\image.py", line 1648, in flow_from_directory
+    return DirectoryIterator(
+  File "C:\Users\acerv\anaconda3\envs\kidney\lib\site-packages\keras\preprocessing\image.py", line 563, in __init__
+    for subdir in sorted(os.listdir(directory)):
+FileNotFoundError: [WinError 3] Le chemin d’accès spécifié est introuvable: 'artifacts\\data_ingestion\\kidney-ct-scan-image'
+[2024-11-28 12:41:36,529: INFO: main: Welcome to our custom log]
+[2024-11-28 12:41:36,529: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2024-11-28 12:41:36,532: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-11-28 12:41:36,534: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-11-28 12:41:36,535: INFO: common: created directory at: artifacts]
+[2024-11-28 12:41:36,535: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-11-28 12:41:36,537: INFO: data_ingestion: Downloading data from https://drive.google.com/file/d/1b8pYGzzS8XBlpmdAzEsU0e_hxOa98yhk into file artifacts/data_ingestion/data.zip]
+[2024-11-28 12:41:41,778: INFO: data_ingestion: Downloaded data from https://drive.google.com/file/d/1b8pYGzzS8XBlpmdAzEsU0e_hxOa98yhk into file artifacts/data_ingestion/data.zip]
+[2024-11-28 12:41:42,405: INFO: main: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2024-11-28 12:41:42,406: INFO: main: *******************]
+[2024-11-28 12:41:42,406: INFO: main: >>>>>> stage Prepare base model started <<<<<<]
+[2024-11-28 12:41:42,409: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-11-28 12:41:42,412: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-11-28 12:41:42,412: INFO: common: created directory at: artifacts]
+[2024-11-28 12:41:42,414: INFO: common: created directory at: artifacts/prepare_base_model]
+[2024-11-28 12:41:43,084: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2024-11-28 12:41:43,362: INFO: main: >>>>>> stage Prepare base model completed <<<<<<
+
+x==========x]
+[2024-11-28 12:41:43,363: INFO: main: *******************]
+[2024-11-28 12:41:43,364: INFO: main: >>>>>> stage Training started <<<<<<]
+[2024-11-28 12:41:43,367: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-11-28 12:41:43,370: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-11-28 12:41:43,371: INFO: common: created directory at: artifacts]
+[2024-11-28 12:41:43,372: INFO: common: created directory at: artifacts\training]
+[2024-11-28 12:41:43,855: ERROR: main: [WinError 3] Le chemin d’accès spécifié est introuvable: 'artifacts\\data_ingestion\\kidney-ct-scan-image']
+Traceback (most recent call last):
+  File "main.py", line 37, in <module>
+    model_trainer.main()
+  File "c:\users\acerv\desktop\projects\project_endtoend_kidney\src\cnnClassifier\pipeline\stage_03_model_training.py", line 23, in main
+    training.train_valid_generator()
+  File "c:\users\acerv\desktop\projects\project_endtoend_kidney\src\cnnClassifier\components\model_training.py", line 37, in train_valid_generator
+    self.valid_generator = valid_datagenerator.flow_from_directory(
+  File "C:\Users\acerv\anaconda3\envs\kidney\lib\site-packages\keras\preprocessing\image.py", line 1648, in flow_from_directory
+    return DirectoryIterator(
+  File "C:\Users\acerv\anaconda3\envs\kidney\lib\site-packages\keras\preprocessing\image.py", line 563, in __init__
+    for subdir in sorted(os.listdir(directory)):
+FileNotFoundError: [WinError 3] Le chemin d’accès spécifié est introuvable: 'artifacts\\data_ingestion\\kidney-ct-scan-image'
+[2024-11-28 12:44:27,561: INFO: main: Welcome to our custom log]
+[2024-11-28 12:44:27,562: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2024-11-28 12:44:27,564: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-11-28 12:44:27,566: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-11-28 12:44:27,567: INFO: common: created directory at: artifacts]
+[2024-11-28 12:44:27,568: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-11-28 12:44:27,569: INFO: data_ingestion: Downloading data from https://drive.google.com/file/d/1b8pYGzzS8XBlpmdAzEsU0e_hxOa98yhk into file artifacts/data_ingestion/data.zip]
+[2024-11-28 12:44:32,425: INFO: data_ingestion: Downloaded data from https://drive.google.com/file/d/1b8pYGzzS8XBlpmdAzEsU0e_hxOa98yhk into file artifacts/data_ingestion/data.zip]
+[2024-11-28 12:44:33,042: INFO: main: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2024-11-28 12:44:33,043: INFO: main: *******************]
+[2024-11-28 12:44:33,043: INFO: main: >>>>>> stage Prepare base model started <<<<<<]
+[2024-11-28 12:44:33,047: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-11-28 12:44:33,049: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-11-28 12:44:33,050: INFO: common: created directory at: artifacts]
+[2024-11-28 12:44:33,051: INFO: common: created directory at: artifacts/prepare_base_model]
+[2024-11-28 12:44:33,663: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2024-11-28 12:44:33,952: INFO: main: >>>>>> stage Prepare base model completed <<<<<<
+
+x==========x]
+[2024-11-28 12:44:33,953: INFO: main: *******************]
+[2024-11-28 12:44:33,954: INFO: main: >>>>>> stage Training started <<<<<<]
+[2024-11-28 12:44:33,957: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-11-28 12:44:33,960: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-11-28 12:44:33,961: INFO: common: created directory at: artifacts]
+[2024-11-28 12:44:33,962: INFO: common: created directory at: artifacts\training]
+[2024-11-28 12:44:34,445: ERROR: main: [WinError 3] Le chemin d’accès spécifié est introuvable: 'artifacts\\data_ingestion\\kidney-ct-scan-image']
+Traceback (most recent call last):
+  File "main.py", line 37, in <module>
+    model_trainer.main()
+  File "c:\users\acerv\desktop\projects\project_endtoend_kidney\src\cnnClassifier\pipeline\stage_03_model_training.py", line 23, in main
+    training.train_valid_generator()
+  File "c:\users\acerv\desktop\projects\project_endtoend_kidney\src\cnnClassifier\components\model_training.py", line 37, in train_valid_generator
+    self.valid_generator = valid_datagenerator.flow_from_directory(
+  File "C:\Users\acerv\anaconda3\envs\kidney\lib\site-packages\keras\preprocessing\image.py", line 1648, in flow_from_directory
+    return DirectoryIterator(
+  File "C:\Users\acerv\anaconda3\envs\kidney\lib\site-packages\keras\preprocessing\image.py", line 563, in __init__
+    for subdir in sorted(os.listdir(directory)):
+FileNotFoundError: [WinError 3] Le chemin d’accès spécifié est introuvable: 'artifacts\\data_ingestion\\kidney-ct-scan-image'
+[2024-11-28 12:45:04,131: INFO: main: Welcome to our custom log]
+[2024-11-28 12:45:04,131: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2024-11-28 12:45:04,134: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-11-28 12:45:04,136: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-11-28 12:45:04,137: INFO: common: created directory at: artifacts]
+[2024-11-28 12:45:04,138: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-11-28 12:45:04,139: INFO: data_ingestion: Downloading data from https://drive.google.com/file/d/1b8pYGzzS8XBlpmdAzEsU0e_hxOa98yhk into file artifacts/data_ingestion/data.zip]
+[2024-11-28 12:45:09,829: INFO: data_ingestion: Downloaded data from https://drive.google.com/file/d/1b8pYGzzS8XBlpmdAzEsU0e_hxOa98yhk into file artifacts/data_ingestion/data.zip]
+[2024-11-28 12:45:10,579: INFO: main: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2024-11-28 12:45:10,580: INFO: main: *******************]
+[2024-11-28 12:45:10,580: INFO: main: >>>>>> stage Prepare base model started <<<<<<]
+[2024-11-28 12:45:10,584: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-11-28 12:45:10,587: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-11-28 12:45:10,588: INFO: common: created directory at: artifacts]
+[2024-11-28 12:45:10,588: INFO: common: created directory at: artifacts/prepare_base_model]
+[2024-11-28 12:45:11,226: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2024-11-28 12:45:11,511: INFO: main: >>>>>> stage Prepare base model completed <<<<<<
+
+x==========x]
+[2024-11-28 12:45:11,511: INFO: main: *******************]
+[2024-11-28 12:45:11,512: INFO: main: >>>>>> stage Training started <<<<<<]
+[2024-11-28 12:45:11,515: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-11-28 12:45:11,519: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-11-28 12:45:11,519: INFO: common: created directory at: artifacts]
+[2024-11-28 12:45:11,520: INFO: common: created directory at: artifacts\training]
+[2024-11-28 12:45:11,939: ERROR: main: [WinError 3] Le chemin d’accès spécifié est introuvable: 'artifacts\\data_ingestion\\kidney-ct-scan-image']
+Traceback (most recent call last):
+  File "main.py", line 37, in <module>
+    model_trainer.main()
+  File "c:\users\acerv\desktop\projects\project_endtoend_kidney\src\cnnClassifier\pipeline\stage_03_model_training.py", line 23, in main
+    training.train_valid_generator()
+  File "c:\users\acerv\desktop\projects\project_endtoend_kidney\src\cnnClassifier\components\model_training.py", line 37, in train_valid_generator
+    self.valid_generator = valid_datagenerator.flow_from_directory(
+  File "C:\Users\acerv\anaconda3\envs\kidney\lib\site-packages\keras\preprocessing\image.py", line 1648, in flow_from_directory
+    return DirectoryIterator(
+  File "C:\Users\acerv\anaconda3\envs\kidney\lib\site-packages\keras\preprocessing\image.py", line 563, in __init__
+    for subdir in sorted(os.listdir(directory)):
+FileNotFoundError: [WinError 3] Le chemin d’accès spécifié est introuvable: 'artifacts\\data_ingestion\\kidney-ct-scan-image'
+[2024-11-28 12:55:14,759: INFO: main: Welcome to our custom log]
+[2024-11-28 12:55:14,760: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2024-11-28 12:55:14,763: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-11-28 12:55:14,765: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-11-28 12:55:14,766: INFO: common: created directory at: artifacts]
+[2024-11-28 12:55:14,767: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-11-28 12:55:14,767: INFO: data_ingestion: Downloading data from https://drive.google.com/file/d/1b8pYGzzS8XBlpmdAzEsU0e_hxOa98yhk into file artifacts/data_ingestion/data.zip]
+[2024-11-28 12:55:20,088: INFO: data_ingestion: Downloaded data from https://drive.google.com/file/d/1b8pYGzzS8XBlpmdAzEsU0e_hxOa98yhk into file artifacts/data_ingestion/data.zip]
+[2024-11-28 12:55:20,744: INFO: main: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2024-11-28 12:55:20,744: INFO: main: *******************]
+[2024-11-28 12:55:20,745: INFO: main: >>>>>> stage Prepare base model started <<<<<<]
+[2024-11-28 12:55:20,748: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-11-28 12:55:20,750: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-11-28 12:55:20,750: INFO: common: created directory at: artifacts]
+[2024-11-28 12:55:20,751: INFO: common: created directory at: artifacts/prepare_base_model]
+[2024-11-28 12:55:21,491: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2024-11-28 12:55:21,755: INFO: main: >>>>>> stage Prepare base model completed <<<<<<
+
+x==========x]
+[2024-11-28 12:55:21,756: INFO: main: *******************]
+[2024-11-28 12:55:21,756: INFO: main: >>>>>> stage Training started <<<<<<]
+[2024-11-28 12:55:21,759: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-11-28 12:55:21,762: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-11-28 12:55:21,763: INFO: common: created directory at: artifacts]
+[2024-11-28 12:55:21,764: INFO: common: created directory at: artifacts\training]
+[2024-11-28 12:55:22,254: ERROR: main: [WinError 3] Le chemin d’accès spécifié est introuvable: 'artifacts\\data_ingestion\\kidney-ct-scan-image']
+Traceback (most recent call last):
+  File "main.py", line 37, in <module>
+    model_trainer.main()
+  File "c:\users\acerv\desktop\projects\project_endtoend_kidney\src\cnnClassifier\pipeline\stage_03_model_training.py", line 23, in main
+    training.train_valid_generator()
+  File "c:\users\acerv\desktop\projects\project_endtoend_kidney\src\cnnClassifier\components\model_training.py", line 37, in train_valid_generator
+    self.valid_generator = valid_datagenerator.flow_from_directory(
+  File "C:\Users\acerv\anaconda3\envs\kidney\lib\site-packages\keras\preprocessing\image.py", line 1648, in flow_from_directory
+    return DirectoryIterator(
+  File "C:\Users\acerv\anaconda3\envs\kidney\lib\site-packages\keras\preprocessing\image.py", line 563, in __init__
+    for subdir in sorted(os.listdir(directory)):
+FileNotFoundError: [WinError 3] Le chemin d’accès spécifié est introuvable: 'artifacts\\data_ingestion\\kidney-ct-scan-image'
+[2024-11-28 12:56:07,294: INFO: main: Welcome to our custom log]
+[2024-11-28 12:56:07,294: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2024-11-28 12:56:07,297: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-11-28 12:56:07,299: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-11-28 12:56:07,300: INFO: common: created directory at: artifacts]
+[2024-11-28 12:56:07,301: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-11-28 12:56:07,301: INFO: data_ingestion: Downloading data from https://drive.google.com/file/d/1b8pYGzzS8XBlpmdAzEsU0e_hxOa98yhk into file artifacts/data_ingestion/data.zip]
+[2024-11-28 12:56:12,414: INFO: data_ingestion: Downloaded data from https://drive.google.com/file/d/1b8pYGzzS8XBlpmdAzEsU0e_hxOa98yhk into file artifacts/data_ingestion/data.zip]
+[2024-11-28 12:56:13,248: INFO: main: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2024-11-28 12:56:13,249: INFO: main: *******************]
+[2024-11-28 12:56:13,249: INFO: main: >>>>>> stage Prepare base model started <<<<<<]
+[2024-11-28 12:56:13,254: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-11-28 12:56:13,258: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-11-28 12:56:13,259: INFO: common: created directory at: artifacts]
+[2024-11-28 12:56:13,259: INFO: common: created directory at: artifacts/prepare_base_model]
+[2024-11-28 12:56:13,989: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2024-11-28 12:56:14,286: INFO: main: >>>>>> stage Prepare base model completed <<<<<<
+
+x==========x]
+[2024-11-28 12:56:14,287: INFO: main: *******************]
+[2024-11-28 12:56:14,287: INFO: main: >>>>>> stage Training started <<<<<<]
+[2024-11-28 12:56:14,291: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-11-28 12:56:14,293: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-11-28 12:56:14,294: INFO: common: created directory at: artifacts]
+[2024-11-28 12:56:14,295: INFO: common: created directory at: artifacts\training]
+[2024-11-28 12:56:19,486: ERROR: main: Graph execution error:
+
+Detected at node 'categorical_crossentropy/softmax_cross_entropy_with_logits' defined at (most recent call last):
+    File "main.py", line 37, in <module>
+      model_trainer.main()
+    File "c:\users\acerv\desktop\projects\project_endtoend_kidney\src\cnnClassifier\pipeline\stage_03_model_training.py", line 24, in main
+      training.train()
+    File "c:\users\acerv\desktop\projects\project_endtoend_kidney\src\cnnClassifier\components\model_training.py", line 76, in train
+      self.model.fit(
+    File "C:\Users\acerv\anaconda3\envs\kidney\lib\site-packages\keras\utils\traceback_utils.py", line 65, in error_handler
+      return fn(*args, **kwargs)
+    File "C:\Users\acerv\anaconda3\envs\kidney\lib\site-packages\keras\engine\training.py", line 1685, in fit
+      tmp_logs = self.train_function(iterator)
+    File "C:\Users\acerv\anaconda3\envs\kidney\lib\site-packages\keras\engine\training.py", line 1284, in train_function
+      return step_function(self, iterator)
+    File "C:\Users\acerv\anaconda3\envs\kidney\lib\site-packages\keras\engine\training.py", line 1268, in step_function
+      outputs = model.distribute_strategy.run(run_step, args=(data,))
+    File "C:\Users\acerv\anaconda3\envs\kidney\lib\site-packages\keras\engine\training.py", line 1249, in run_step
+      outputs = model.train_step(data)
+    File "C:\Users\acerv\anaconda3\envs\kidney\lib\site-packages\keras\engine\training.py", line 1051, in train_step
+      loss = self.compute_loss(x, y, y_pred, sample_weight)
+    File "C:\Users\acerv\anaconda3\envs\kidney\lib\site-packages\keras\engine\training.py", line 1109, in compute_loss
+      return self.compiled_loss(
+    File "C:\Users\acerv\anaconda3\envs\kidney\lib\site-packages\keras\engine\compile_utils.py", line 265, in __call__
+      loss_value = loss_obj(y_t, y_p, sample_weight=sw)
+    File "C:\Users\acerv\anaconda3\envs\kidney\lib\site-packages\keras\losses.py", line 142, in __call__
+      losses = call_fn(y_true, y_pred)
+    File "C:\Users\acerv\anaconda3\envs\kidney\lib\site-packages\keras\losses.py", line 268, in call
+      return ag_fn(y_true, y_pred, **self._fn_kwargs)
+    File "C:\Users\acerv\anaconda3\envs\kidney\lib\site-packages\keras\losses.py", line 1984, in categorical_crossentropy
+      return backend.categorical_crossentropy(
+    File "C:\Users\acerv\anaconda3\envs\kidney\lib\site-packages\keras\backend.py", line 5565, in categorical_crossentropy
+      return tf.nn.softmax_cross_entropy_with_logits(
+Node: 'categorical_crossentropy/softmax_cross_entropy_with_logits'
+logits and labels must be broadcastable: logits_size=[16,4] labels_size=[16,2]
+	 [[{{node categorical_crossentropy/softmax_cross_entropy_with_logits}}]] [Op:__inference_train_function_1463]]
+Traceback (most recent call last):
+  File "main.py", line 37, in <module>
+    model_trainer.main()
+  File "c:\users\acerv\desktop\projects\project_endtoend_kidney\src\cnnClassifier\pipeline\stage_03_model_training.py", line 24, in main
+    training.train()
+  File "c:\users\acerv\desktop\projects\project_endtoend_kidney\src\cnnClassifier\components\model_training.py", line 76, in train
+    self.model.fit(
+  File "C:\Users\acerv\anaconda3\envs\kidney\lib\site-packages\keras\utils\traceback_utils.py", line 70, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "C:\Users\acerv\anaconda3\envs\kidney\lib\site-packages\tensorflow\python\eager\execute.py", line 52, in quick_execute
+    tensors = pywrap_tfe.TFE_Py_Execute(ctx._handle, device_name, op_name,
+tensorflow.python.framework.errors_impl.InvalidArgumentError: Graph execution error:
+
+Detected at node 'categorical_crossentropy/softmax_cross_entropy_with_logits' defined at (most recent call last):
+    File "main.py", line 37, in <module>
+      model_trainer.main()
+    File "c:\users\acerv\desktop\projects\project_endtoend_kidney\src\cnnClassifier\pipeline\stage_03_model_training.py", line 24, in main
+      training.train()
+    File "c:\users\acerv\desktop\projects\project_endtoend_kidney\src\cnnClassifier\components\model_training.py", line 76, in train
+      self.model.fit(
+    File "C:\Users\acerv\anaconda3\envs\kidney\lib\site-packages\keras\utils\traceback_utils.py", line 65, in error_handler
+      return fn(*args, **kwargs)
+    File "C:\Users\acerv\anaconda3\envs\kidney\lib\site-packages\keras\engine\training.py", line 1685, in fit
+      tmp_logs = self.train_function(iterator)
+    File "C:\Users\acerv\anaconda3\envs\kidney\lib\site-packages\keras\engine\training.py", line 1284, in train_function
+      return step_function(self, iterator)
+    File "C:\Users\acerv\anaconda3\envs\kidney\lib\site-packages\keras\engine\training.py", line 1268, in step_function
+      outputs = model.distribute_strategy.run(run_step, args=(data,))
+    File "C:\Users\acerv\anaconda3\envs\kidney\lib\site-packages\keras\engine\training.py", line 1249, in run_step
+      outputs = model.train_step(data)
+    File "C:\Users\acerv\anaconda3\envs\kidney\lib\site-packages\keras\engine\training.py", line 1051, in train_step
+      loss = self.compute_loss(x, y, y_pred, sample_weight)
+    File "C:\Users\acerv\anaconda3\envs\kidney\lib\site-packages\keras\engine\training.py", line 1109, in compute_loss
+      return self.compiled_loss(
+    File "C:\Users\acerv\anaconda3\envs\kidney\lib\site-packages\keras\engine\compile_utils.py", line 265, in __call__
+      loss_value = loss_obj(y_t, y_p, sample_weight=sw)
+    File "C:\Users\acerv\anaconda3\envs\kidney\lib\site-packages\keras\losses.py", line 142, in __call__
+      losses = call_fn(y_true, y_pred)
+    File "C:\Users\acerv\anaconda3\envs\kidney\lib\site-packages\keras\losses.py", line 268, in call
+      return ag_fn(y_true, y_pred, **self._fn_kwargs)
+    File "C:\Users\acerv\anaconda3\envs\kidney\lib\site-packages\keras\losses.py", line 1984, in categorical_crossentropy
+      return backend.categorical_crossentropy(
+    File "C:\Users\acerv\anaconda3\envs\kidney\lib\site-packages\keras\backend.py", line 5565, in categorical_crossentropy
+      return tf.nn.softmax_cross_entropy_with_logits(
+Node: 'categorical_crossentropy/softmax_cross_entropy_with_logits'
+logits and labels must be broadcastable: logits_size=[16,4] labels_size=[16,2]
+	 [[{{node categorical_crossentropy/softmax_cross_entropy_with_logits}}]] [Op:__inference_train_function_1463]
+[2024-11-28 13:01:08,930: INFO: main: Welcome to our custom log]
+[2024-11-28 13:01:08,930: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2024-11-28 13:01:08,933: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-11-28 13:01:08,935: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-11-28 13:01:08,935: INFO: common: created directory at: artifacts]
+[2024-11-28 13:01:08,936: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-11-28 13:01:08,936: INFO: data_ingestion: Downloading data from https://drive.google.com/file/d/1b8pYGzzS8XBlpmdAzEsU0e_hxOa98yhk into file artifacts/data_ingestion/data.zip]
+[2024-11-28 13:01:13,929: INFO: data_ingestion: Downloaded data from https://drive.google.com/file/d/1b8pYGzzS8XBlpmdAzEsU0e_hxOa98yhk into file artifacts/data_ingestion/data.zip]
+[2024-11-28 13:01:14,582: INFO: main: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2024-11-28 13:01:14,583: INFO: main: *******************]
+[2024-11-28 13:01:14,583: INFO: main: >>>>>> stage Prepare base model started <<<<<<]
+[2024-11-28 13:01:14,588: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-11-28 13:01:14,593: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-11-28 13:01:14,594: INFO: common: created directory at: artifacts]
+[2024-11-28 13:01:14,595: INFO: common: created directory at: artifacts/prepare_base_model]
+[2024-11-28 13:01:15,305: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2024-11-28 13:01:15,636: INFO: main: >>>>>> stage Prepare base model completed <<<<<<
+
+x==========x]
+[2024-11-28 13:01:15,637: INFO: main: *******************]
+[2024-11-28 13:01:15,638: INFO: main: >>>>>> stage Training started <<<<<<]
+[2024-11-28 13:01:15,642: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-11-28 13:01:15,645: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-11-28 13:01:15,646: INFO: common: created directory at: artifacts]
+[2024-11-28 13:01:15,647: INFO: common: created directory at: artifacts\training]
+[2024-11-28 13:18:22,190: INFO: main: >>>>>> stage Training completed <<<<<<
+
+x==========x]
+[2024-12-02 17:29:42,554: INFO: stage_04_model_evaluation: *******************]
+[2024-12-02 17:29:42,555: INFO: stage_04_model_evaluation: >>>>>> stage Evaluation stage started <<<<<<]
+[2024-12-02 17:29:42,558: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-12-02 17:29:42,562: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-12-02 17:29:42,564: INFO: common: created directory at: artifacts]
+[2024-12-02 17:29:59,163: INFO: common: json file saved at: scores.json]
+[2024-12-02 17:29:59,165: INFO: common: json file saved at: scores.json]
+[2024-12-02 17:29:59,165: INFO: stage_04_model_evaluation: >>>>>> stage Evaluation stage completed <<<<<<
+
+x==========x]
+[2024-12-02 17:49:12,940: INFO: stage_04_model_evaluation: *******************]
+[2024-12-02 17:49:12,942: INFO: stage_04_model_evaluation: >>>>>> stage Evaluation stage started <<<<<<]
+[2024-12-02 17:49:12,945: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-12-02 17:49:12,948: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-12-02 17:49:12,949: INFO: common: created directory at: artifacts]
+[2024-12-02 17:49:30,474: INFO: common: json file saved at: scores.json]
+[2024-12-02 17:49:30,476: INFO: common: json file saved at: scores.json]
+[2024-12-02 17:49:33,835: WARNING: save: Found untraced functions such as _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op while saving (showing 5 of 14). These functions will not be directly callable after loading.]
+[2024-12-02 17:49:35,327: INFO: builder_impl: Assets written to: C:\Users\acerv\AppData\Local\Temp\tmpg1icb0jb\model\data\model\assets]
+[2024-12-02 17:49:57,940: ERROR: stage_04_model_evaluation: When an mlflow-artifacts URI was supplied, the tracking URI must be a valid http or https URI, but it was currently set to file:///C:/Users/acerv/Desktop/Projects/project_endtoend_kidney/mlruns. Perhaps you forgot to set the tracking URI to the running MLflow server. To set the tracking URI, use either of the following methods:
+1. Set the MLFLOW_TRACKING_URI environment variable to the desired tracking URI. `export MLFLOW_TRACKING_URI=http://localhost:5000`
+2. Set the tracking URI programmatically by calling `mlflow.set_tracking_uri`. `mlflow.set_tracking_uri('http://localhost:5000')`]
+Traceback (most recent call last):
+  File "src/cnnClassifier/pipeline/stage_04_model_evaluation.py", line 33, in <module>
+    obj.main()
+  File "src/cnnClassifier/pipeline/stage_04_model_evaluation.py", line 23, in main
+    evaluation.log_into_mlflow()
+  File "c:\users\acerv\desktop\projects\project_endtoend_kidney\src\cnnClassifier\components\model_evaluation_mlflow.py", line 74, in log_into_mlflow
+    mlflow.keras.log_model(self.model, "model")
+  File "C:\Users\acerv\anaconda3\envs\kidney\lib\site-packages\mlflow\tensorflow\__init__.py", line 217, in log_model
+    return Model.log(
+  File "C:\Users\acerv\anaconda3\envs\kidney\lib\site-packages\mlflow\models\model.py", line 744, in log
+    mlflow.tracking.fluent.log_artifacts(local_path, mlflow_model.artifact_path, run_id)
+  File "C:\Users\acerv\anaconda3\envs\kidney\lib\site-packages\mlflow\tracking\fluent.py", line 1170, in log_artifacts
+    MlflowClient().log_artifacts(run_id, local_dir, artifact_path)
+  File "C:\Users\acerv\anaconda3\envs\kidney\lib\site-packages\mlflow\tracking\client.py", line 1977, in log_artifacts
+    self._tracking_client.log_artifacts(run_id, local_dir, artifact_path)
+  File "C:\Users\acerv\anaconda3\envs\kidney\lib\site-packages\mlflow\tracking\_tracking_service\client.py", line 874, in log_artifacts
+    self._get_artifact_repo(run_id).log_artifacts(local_dir, artifact_path)
+  File "C:\Users\acerv\anaconda3\envs\kidney\lib\site-packages\mlflow\tracking\_tracking_service\client.py", line 816, in _get_artifact_repo
+    artifact_repo = get_artifact_repository(artifact_uri)
+  File "C:\Users\acerv\anaconda3\envs\kidney\lib\site-packages\mlflow\store\artifact\artifact_repository_registry.py", line 132, in get_artifact_repository
+    return _artifact_repository_registry.get_artifact_repository(artifact_uri)
+  File "C:\Users\acerv\anaconda3\envs\kidney\lib\site-packages\mlflow\store\artifact\artifact_repository_registry.py", line 77, in get_artifact_repository
+    return repository(artifact_uri)
+  File "C:\Users\acerv\anaconda3\envs\kidney\lib\site-packages\mlflow\store\artifact\mlflow_artifacts_repo.py", line 51, in __init__
+    super().__init__(self.resolve_uri(artifact_uri, get_tracking_uri()))
+  File "C:\Users\acerv\anaconda3\envs\kidney\lib\site-packages\mlflow\store\artifact\mlflow_artifacts_repo.py", line 65, in resolve_uri
+    _validate_uri_scheme(track_parse)
+  File "C:\Users\acerv\anaconda3\envs\kidney\lib\site-packages\mlflow\store\artifact\mlflow_artifacts_repo.py", line 35, in _validate_uri_scheme
+    raise MlflowException(
+mlflow.exceptions.MlflowException: When an mlflow-artifacts URI was supplied, the tracking URI must be a valid http or https URI, but it was currently set to file:///C:/Users/acerv/Desktop/Projects/project_endtoend_kidney/mlruns. Perhaps you forgot to set the tracking URI to the running MLflow server. To set the tracking URI, use either of the following methods:
+1. Set the MLFLOW_TRACKING_URI environment variable to the desired tracking URI. `export MLFLOW_TRACKING_URI=http://localhost:5000`
+2. Set the tracking URI programmatically by calling `mlflow.set_tracking_uri`. `mlflow.set_tracking_uri('http://localhost:5000')`

@@ -1,2 +1,3 @@
 artifacts/*
 src/cnnClassifier.egg-info/*
+mlruns/
